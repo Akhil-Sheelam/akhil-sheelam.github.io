@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Akhil Yakantham Sheelam — Python Developer</title>
+<title>Akhil Sheelam — Data Analyst | Python | SQL | Power BI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -734,6 +734,65 @@ button { font-family: inherit; }
 .rqs-num   { font-size: 20px; font-weight: 800; color: var(--white); line-height: 1; }
 .rqs-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
+
+/* ─── DATA ANALYST POLISH ─── */
+.typing-cursor { color: var(--primary); animation: blink 0.9s infinite; margin-left: 2px; }
+@keyframes blink { 0%,45%{opacity:1} 46%,100%{opacity:0} }
+
+.hero-role { min-height: 34px; }
+.hero-desc strong { color: var(--white); }
+
+.analytics-banner {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(153,41,251,.24), transparent 32%),
+    linear-gradient(135deg, #17172a, #22223a);
+  display: block;
+  padding: 22px;
+}
+.mini-kpi-row { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.mini-kpi-row > div { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.07); border-radius:10px; padding:9px; }
+.mini-kpi-row span { display:block; font-size:8px; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; }
+.mini-kpi-row strong { display:block; margin-top:4px; font-size:15px; color:var(--white); }
+.mini-bars { display:flex; align-items:flex-end; gap:8px; height:72px; margin-top:16px; }
+.mini-bars i { flex:1; background:linear-gradient(to top, var(--primary-dark), var(--primary)); border-radius:5px 5px 2px 2px; opacity:.85; animation:barPulse 2.8s ease-in-out infinite; transform-origin:bottom; }
+.mini-bars i:nth-child(2){animation-delay:.1s}.mini-bars i:nth-child(3){animation-delay:.2s}.mini-bars i:nth-child(4){animation-delay:.3s}.mini-bars i:nth-child(5){animation-delay:.4s}.mini-bars i:nth-child(6){animation-delay:.5s}
+@keyframes barPulse { 0%,100%{transform:scaleY(.92)}50%{transform:scaleY(1)} }
+
+.ml-banner { background:linear-gradient(135deg,#1d1d33,rgba(99,102,241,.10)); }
+.web-banner { background:linear-gradient(135deg,#1d1d33,rgba(74,222,128,.08)); }
+.cv-banner { background:linear-gradient(135deg,#1d1d33,rgba(56,189,248,.08)); }
+.java-banner { background:linear-gradient(135deg,#1d1d33,rgba(255,146,70,.09)); }
+
+.proj-link { color:var(--primary); font-weight:600; transition:color .2s, opacity .2s; }
+.proj-link:hover { color:var(--white); }
+
+.featured-project { border-color: rgba(153,41,251,.28); }
+.featured-project::after {
+  content:'FEATURED ANALYTICS PROJECT';
+  position:absolute; top:14px; right:14px;
+  font-size:9px; font-weight:800; letter-spacing:1px;
+  color:var(--white); background:var(--primary); padding:5px 8px; border-radius:7px;
+  box-shadow:0 8px 22px rgba(153,41,251,.25);
+}
+.proj-card { position:relative; }
+
+.count-up { font-variant-numeric: tabular-nums; }
+
+.skill-card { overflow:hidden; }
+.skill-card::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(153,41,251,.08),transparent 70%);
+  transform:translateX(-110%); transition:transform .7s ease;
+}
+.skill-card:hover::before { transform:translateX(110%); }
+.skill-card { position:relative; }
+.skill-card > * { position:relative; z-index:1; }
+
+.proj-controls .proj-dot { cursor:pointer; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
 </style>
 </head>
 <body>
@@ -805,33 +864,33 @@ button { font-family: inherit; }
     <div>
       <div class="hero-badge">
         <div class="hero-badge-dot"></div>
-        Fresher · Open to Opportunities
+        Data Analyst · Open to Opportunities
       </div>
       <h1 class="hero-name">Akhil Yakantham<br>Sheelam</h1>
-      <p class="hero-role">Python Developer &amp; Automation Enthusiast</p>
-      <p class="hero-desc">A passionate Computer Science student with real internship experience in Python automation, web scraping &amp; data pipelines. Looking for my first full-time role or internship where I can contribute and grow.</p>
+      <p class="hero-role"><span id="typingRole">Data Analyst</span><span class="typing-cursor">|</span></p>
+      <p class="hero-desc">B.Tech Computer Science graduate with hands-on experience in Python, SQL, Pandas, MySQL, data analysis, automation, and Power BI. I build practical analytics solutions that turn raw data into clear, business-ready insights.</p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">✉ &nbsp;Hire Me</a>
-        <a href="#projects" class="btn-ghost">View My Work &rarr;</a>
+        <a href="#contact" class="btn-primary">✉ &nbsp;Open to Data Roles</a>
+        <a href="#projects" class="btn-ghost">View Analytics Projects &rarr;</a>
       </div>
 
       <div class="hero-stats">
         <div>
-          <div class="hero-stat-num">70%</div>
-          <div class="hero-stat-label">Time Saved</div>
+          <div class="hero-stat-num count-up" data-target="70" data-suffix="%">0%</div>
+          <div class="hero-stat-label">Manual Time Reduced</div>
         </div>
         <div>
-          <div class="hero-stat-num">5K+</div>
-          <div class="hero-stat-label">Data Points/Week</div>
+          <div class="hero-stat-num count-up" data-target="5000" data-suffix="+" data-format="k">0+</div>
+          <div class="hero-stat-label">Data Points / Week</div>
         </div>
         <div>
-          <div class="hero-stat-num">8.50</div>
-          <div class="hero-stat-label">CGPA</div>
+          <div class="hero-stat-num count-up" data-target="8.5" data-decimals="2">0.00</div>
+          <div class="hero-stat-label">CGPA / 10</div>
         </div>
         <div>
-          <div class="hero-stat-num">95%</div>
-          <div class="hero-stat-label">Accuracy</div>
+          <div class="hero-stat-num count-up" data-target="95" data-suffix="%">0%</div>
+          <div class="hero-stat-label">Data Accuracy</div>
         </div>
       </div>
     </div>
@@ -844,13 +903,13 @@ button { font-family: inherit; }
           <div class="hero-avatar-glow"></div>
           <div class="hero-avatar">AY</div>
           <div class="card-name">Akhil Yakantham Sheelam</div>
-          <div class="card-role">B.Tech CSE · Nagpur / Pune</div>
+          <div class="card-role">Data Analyst · B.Tech CSE</div>
           <div class="card-tags">
             <span class="card-tag">Python</span>
-            <span class="card-tag">Selenium</span>
+            <span class="card-tag">SQL</span>
+            <span class="card-tag">Power BI</span>
             <span class="card-tag">Pandas</span>
-            <span class="card-tag">Automation</span>
-            <span class="card-tag">Web Scraping</span>
+            <span class="card-tag">MySQL</span>
           </div>
           <div class="card-links">
             <a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer" class="card-link">
@@ -866,10 +925,10 @@ button { font-family: inherit; }
       </div>
 
       <div class="float-badge fb-a">
-        <div class="fb-icon">🐍</div> Python Dev
+        <div class="fb-icon">📊</div> Power BI
       </div>
       <div class="float-badge fb-b">
-        <div class="fb-icon">⭐</div> CGPA 8.50 / 10
+        <div class="fb-icon">🧮</div> SQL + Python
       </div>
     </div>
   </div>
@@ -879,88 +938,51 @@ button { font-family: inherit; }
 <section class="section" id="about">
   <div class="section-head reveal">
     <p class="section-label">Who I Am</p>
-    <h2 class="section-title">About Me</h2>
-    <p class="section-sub">A fresher with real-world internship experience, eager to land my first full-time opportunity in Python development or data engineering.</p>
+    <h2 class="section-title">From Raw Data to Actionable Insights</h2>
+    <p class="section-sub">I combine Python, SQL, and business-focused visualization to turn messy datasets into clear insights and practical decisions.</p>
   </div>
 
   <div class="about-grid">
     <div class="reveal">
       <p class="section-label">My Background</p>
-      <h3 class="about-title">From College to Real-World Python Automation</h3>
-      <p class="about-text">I'm a final-year B.Tech Computer Science student at GH Raisoni College of Engineering and Management, Nagpur. I discovered my passion for Python early on and channelled it into hands-on internships where I built real production-grade scrapers and automation pipelines.</p>
-      <p class="about-text">During my internship at AB Infotech Solutions, I independently built Selenium-based scrapers that cut manual research time by 70% and processed 5,000+ data points weekly — turning messy web data into clean, structured CSV datasets.</p>
-      <p class="about-text">As a fresher, I bring fresh energy, a strong academic foundation (CGPA 8.50), and proven practical skills. I'm actively looking for internships or entry-level roles in Python development, automation, or data engineering.</p>
+      <h3 class="about-title">Data analysis with a strong Python foundation</h3>
+      <p class="about-text">I’m a B.Tech Computer Science graduate with hands-on experience in Python, SQL, Pandas, MySQL, data cleaning, automation, and dashboard development.</p>
+      <p class="about-text">During my internship at AB Infotech Solutions, I worked with web data extraction, structured datasets, Pandas-based processing, and automated data pipelines. I also built an end-to-end retail analytics project using Python, SQL/MySQL, and Power BI.</p>
+      <p class="about-text">I’m currently focused on entry-level Data Analyst opportunities where I can apply technical skills to real business questions and communicate insights clearly.</p>
       <div class="about-actions">
-        <a href="#contact" class="btn-primary">✉ Get in Touch</a>
-        <a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer" class="btn-ghost">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          View GitHub
-        </a>
+        <a href="#projects" class="btn-primary">Explore My Work &rarr;</a>
+        <a href="#resume" class="btn-ghost">View Resume</a>
       </div>
     </div>
 
-    <div class="reveal">
-      <div class="info-card">
-        <div class="info-row">
-          <div class="info-icon">🎓</div>
-          <div>
-            <div class="info-label">Degree</div>
-            <div class="info-value">B.Tech — Computer Science &amp; Engineering</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">🏛️</div>
-          <div>
-            <div class="info-label">College</div>
-            <div class="info-value">GH Raisoni College, Nagpur</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">📊</div>
-          <div>
-            <div class="info-label">CGPA</div>
-            <div class="info-value">8.50 / 10 (Pursuing)</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">📍</div>
-          <div>
-            <div class="info-label">Location</div>
-            <div class="info-value">Pune / Nagpur, Maharashtra, India</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">📧</div>
-          <div>
-            <div class="info-label">Email</div>
-            <div class="info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d8b9b3b0b1b4abb0bdbdb4b9b5ec98bfb5b9b1b4f6bbb7b5">[email&#160;protected]</a></div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">💼</div>
-          <div>
-            <div class="info-label">Looking For</div>
-            <div class="info-value" style="color:var(--green);">Internship / Entry-Level Role</div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </div>
-          <div>
-            <div class="info-label">GitHub</div>
-            <div class="info-value"><a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">github.com/Akhil-Sheelam ↗</a></div>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--primary)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div>
-            <div class="info-label">LinkedIn</div>
-            <div class="info-value"><a href="https://www.linkedin.com/in/akhilsheelam-" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">linkedin.com/in/akhilsheelam- ↗</a></div>
-          </div>
-        </div>
+    <div class="info-card reveal">
+      <div class="info-row">
+        <div class="info-icon">🎓</div>
+        <div><div class="info-label">Degree</div><div class="info-value">B.Tech — Computer Science &amp; Engineering</div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🏫</div>
+        <div><div class="info-label">College</div><div class="info-value">GH Raisoni College, Nagpur</div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">📊</div>
+        <div><div class="info-label">CGPA</div><div class="info-value">8.50 / 10</div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">📍</div>
+        <div><div class="info-label">Location</div><div class="info-value">Pune / Nagpur, Maharashtra, India</div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">💼</div>
+        <div><div class="info-label">Target Role</div><div class="info-value">Data Analyst · Entry Level</div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🔗</div>
+        <div><div class="info-label">GitHub</div><div class="info-value"><a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">github.com/Akhil-Sheelam ↗</a></div></div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">in</div>
+        <div><div class="info-label">LinkedIn</div><div class="info-value"><a href="https://www.linkedin.com/in/akhilsheelam-" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">linkedin.com/in/akhilsheelam- ↗</a></div></div>
       </div>
     </div>
   </div>
@@ -970,53 +992,53 @@ button { font-family: inherit; }
 <section class="section" id="skills">
   <div class="section-head reveal">
     <p class="section-label">My Toolkit</p>
-    <h2 class="section-title">Skills &amp; Technologies</h2>
-    <p class="section-sub">Built through coursework, personal projects, and real internship experience — a practical toolkit ready for the workplace.</p>
+    <h2 class="section-title">Skills Built for Data Analysis</h2>
+    <p class="section-sub">A practical toolkit across data preparation, SQL analysis, business intelligence, and Python-based analytics.</p>
   </div>
 
   <div class="skills-grid">
     <div class="skill-card reveal">
       <div class="skill-icon">🐍</div>
-      <div class="skill-name">Programming Languages</div>
+      <div class="skill-name">Python &amp; Data Analysis</div>
       <div class="skill-tags">
         <span class="skill-tag">Python</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">C</span>
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">PHP</span>
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
-      </div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">📦</div>
-      <div class="skill-name">Python Libraries</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Selenium</span>
         <span class="skill-tag">Pandas</span>
         <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Jupyter</span>
+        <span class="skill-tag">EDA</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-icon">🛠️</div>
-      <div class="skill-name">Tools &amp; Databases</div>
+      <div class="skill-icon">🧮</div>
+      <div class="skill-name">SQL &amp; Databases</div>
       <div class="skill-tags">
-        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">SQL</span>
         <span class="skill-tag">MySQL</span>
-        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Joins</span>
+        <span class="skill-tag">Aggregations</span>
+        <span class="skill-tag">Business Queries</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-icon">⚙️</div>
-      <div class="skill-name">Core Competencies</div>
+      <div class="skill-icon">📈</div>
+      <div class="skill-name">BI &amp; Visualization</div>
       <div class="skill-tags">
-        <span class="skill-tag">Web Scraping</span>
-        <span class="skill-tag">Data Extraction</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">DAX</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">KPIs</span>
+        <span class="skill-tag">Dashboards</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">🧹</div>
+      <div class="skill-name">Analytics Workflow</div>
+      <div class="skill-tags">
         <span class="skill-tag">Data Cleaning</span>
-        <span class="skill-tag">Process Automation</span>
-        <span class="skill-tag">API Integration</span>
-        <span class="skill-tag">Data Structuring</span>
+        <span class="skill-tag">Data Validation</span>
+        <span class="skill-tag">Data Transformation</span>
+        <span class="skill-tag">Reporting</span>
+        <span class="skill-tag">Git / GitHub</span>
       </div>
     </div>
   </div>
@@ -1029,8 +1051,8 @@ button { font-family: inherit; }
 
   <div class="section-head reveal">
     <p class="section-label">Work History</p>
-    <h2 class="section-title">Internship Experience</h2>
-    <p class="section-sub">Real-world experience through internships — the foundation of my practical Python and automation skills.</p>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-sub">Practical experience combining automation, data extraction, cleaning, and structured reporting.</p>
   </div>
 
   <div class="exp-list">
@@ -1043,11 +1065,11 @@ button { font-family: inherit; }
         </div>
         <div class="exp-company">AB Infotech Solutions Pvt Ltd · Pune</div>
         <ul class="exp-points">
-          <li>Developed Selenium automation scripts to scrape public web data, cutting manual collection time by <strong style="color:var(--text);">70%</strong></li>
-          <li>Cleaned and structured raw web data into CSV/Excel formats using Pandas for internal analysis and reporting</li>
-          <li>Built data pipelines for email extraction and social media sentiment analysis — processing <strong style="color:var(--text);">5,000+ data points weekly</strong></li>
-          <li>Monitored product availability and pricing across e-commerce platforms with real-time scrapers</li>
-          <li>Handled dynamic content and anti-bot mechanisms using advanced Selenium WebDriver techniques</li>
+          <li>Automated public web-data collection with Selenium, reducing manual collection time by <strong style="color:var(--text);">70%</strong>.</li>
+          <li>Cleaned and structured raw web data into CSV/Excel datasets using <strong style="color:var(--text);">Pandas</strong> for analysis and reporting.</li>
+          <li>Processed <strong style="color:var(--text);">5,000+ data points weekly</strong> through automated extraction and data-processing workflows.</li>
+          <li>Monitored product availability and pricing across e-commerce platforms and maintained structured outputs for internal use.</li>
+          <li>Worked with dynamic web content and Selenium WebDriver to maintain reliable automated collection workflows.</li>
         </ul>
       </div>
     </div>
@@ -1061,8 +1083,8 @@ button { font-family: inherit; }
         </div>
         <div class="exp-company">Maximum Solutions Automation Training Institute · Nagpur</div>
         <ul class="exp-points">
-          <li>Built automation tools in Python with focus on data manipulation using NumPy and Pandas</li>
-          <li>Collaborated in agile team projects to deliver working automation solutions</li>
+          <li>Built Python automation tools with a focus on data manipulation using <strong style="color:var(--text);">NumPy</strong> and <strong style="color:var(--text);">Pandas</strong>.</li>
+          <li>Applied programming and data-processing concepts in team-based automation projects.</li>
         </ul>
       </div>
     </div>
@@ -1074,82 +1096,110 @@ button { font-family: inherit; }
   <div class="blob proj-blob"></div>
 
   <div class="section-head reveal">
-    <p class="section-label">What I've Built</p>
-    <h2 class="section-title">Projects</h2>
-    <p class="section-sub">Hands-on projects that demonstrate automation, data engineering and IoT skills built during and outside of internships.</p>
+    <p class="section-label">Featured Work</p>
+    <h2 class="section-title">Projects That Show Real-World Skills</h2>
+    <p class="section-sub">Analytics first, supported by machine learning, web applications, and computer vision projects.</p>
   </div>
 
   <div class="proj-track-wrap reveal">
     <div class="proj-track" id="projTrack">
 
-      <div class="proj-card">
-        <div class="proj-banner">🤖</div>
-        <div class="proj-body">
-          <div class="proj-title">Automated Data Collection Bot</div>
-          <p class="proj-desc">Python-based scraper using Selenium that extracts contact info and lead data from 10+ public directories with 95% accuracy.</p>
-          <div class="proj-tags">
-            <span class="proj-tag">Python</span>
-            <span class="proj-tag">Selenium</span>
-            <span class="proj-tag">Pandas</span>
-            <span class="proj-tag">CSV</span>
+      <article class="proj-card featured-project">
+        <div class="proj-banner analytics-banner">
+          <div class="mini-kpi-row">
+            <div><span>Sales</span><strong>2.30M</strong></div>
+            <div><span>Profit</span><strong>286K</strong></div>
+            <div><span>Margin</span><strong>12.47%</strong></div>
           </div>
-          <div class="proj-highlights">
-            <div class="proj-hl">Research time cut from 8 hours to 30 minutes</div>
-            <div class="proj-hl">95% data accuracy across structured CSV output</div>
-            <div class="proj-hl">10+ public directories automated</div>
+          <div class="mini-bars">
+            <i style="height:35%"></i><i style="height:55%"></i><i style="height:75%"></i><i style="height:48%"></i><i style="height:90%"></i><i style="height:62%"></i>
           </div>
         </div>
-      </div>
+        <div class="proj-body">
+          <div class="proj-title">Superstore Sales &amp; Profitability Analytics</div>
+          <p class="proj-desc">Analyzed 9,994 retail transactions using Python, Pandas, MySQL, SQL, and Power BI to evaluate sales, profitability, products, customers, discounts, regions, and shipping performance.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">SQL</span><span class="proj-tag">MySQL</span><span class="proj-tag">Power BI</span>
+          </div>
+          <div class="proj-highlights">
+            <div class="proj-hl">3-page interactive Power BI dashboard</div>
+            <div class="proj-hl">Business-focused SQL analysis and KPI reporting</div>
+            <div class="proj-hl"><a class="proj-link" href="https://github.com/Akhil-Sheelam/superstore-sales-profitability-analysis" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
+          </div>
+        </div>
+      </article>
 
-      <div class="proj-card">
-        <div class="proj-banner" style="background:linear-gradient(135deg,#1e1e35,rgba(196,245,233,0.06));">🗑️</div>
+      <article class="proj-card">
+        <div class="proj-banner ml-banner">🛡️</div>
         <div class="proj-body">
-          <div class="proj-title">Smart Dustbin with GSM Module</div>
-          <p class="proj-desc">IoT waste management system with real-time capacity monitoring and automated GSM alerts to municipal services.</p>
+          <div class="proj-title">SMS Spam Detection using Deep Learning</div>
+          <p class="proj-desc">Built a text classification workflow for identifying spam and ham SMS messages using Python, TensorFlow, Keras, and NLP techniques.</p>
           <div class="proj-tags">
-            <span class="proj-tag">IoT</span>
-            <span class="proj-tag">GSM</span>
-            <span class="proj-tag">Sensors</span>
-            <span class="proj-tag">Embedded</span>
+            <span class="proj-tag">Python</span><span class="proj-tag">TensorFlow</span><span class="proj-tag">Keras</span><span class="proj-tag">NLP</span>
           </div>
           <div class="proj-highlights">
-            <div class="proj-hl">40% improvement in collection efficiency</div>
-            <div class="proj-hl">Real-time sensor monitoring system</div>
-            <div class="proj-hl">Automated threshold-based GSM alerts</div>
+            <div class="proj-hl">Text preprocessing and tokenization</div>
+            <div class="proj-hl">Neural-network based classification</div>
+            <div class="proj-hl"><a class="proj-link" href="https://github.com/Akhil-Sheelam/sms_spam_Detection" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="proj-card">
-        <div class="proj-banner" style="background:linear-gradient(135deg,#1e1e35,rgba(255,226,176,0.08));">📊</div>
+      <article class="proj-card">
+        <div class="proj-banner web-banner">👥</div>
         <div class="proj-body">
-          <div class="proj-title">Sentiment Analysis Pipeline</div>
-          <p class="proj-desc">End-to-end pipeline for automated social media data extraction and sentiment classification, built during internship.</p>
+          <div class="proj-title">Employee Management &amp; Records System</div>
+          <p class="proj-desc">Developed a web-based employee management application using Django and MySQL for storing and managing structured employee records.</p>
           <div class="proj-tags">
-            <span class="proj-tag">Python</span>
-            <span class="proj-tag">Pandas</span>
-            <span class="proj-tag">Automation</span>
-            <span class="proj-tag">Data Pipeline</span>
+            <span class="proj-tag">Python</span><span class="proj-tag">Django</span><span class="proj-tag">MySQL</span><span class="proj-tag">CRUD</span>
           </div>
           <div class="proj-highlights">
-            <div class="proj-hl">5,000+ data points processed every week</div>
-            <div class="proj-hl">Fully automated extraction to report</div>
-            <div class="proj-hl">Delivered as part of internship at AB Infotech</div>
+            <div class="proj-hl">Structured database-backed application</div>
+            <div class="proj-hl">Employee record management workflow</div>
+            <div class="proj-hl"><a class="proj-link" href="https://github.com/Akhil-Sheelam/Employee-management-system" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
           </div>
         </div>
-      </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-banner cv-banner">🕺</div>
+        <div class="proj-body">
+          <div class="proj-title">Real-Time Human Pose Detection System</div>
+          <p class="proj-desc">Built a real-time computer vision application for human pose landmark detection and tracking from visual input.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span><span class="proj-tag">OpenCV</span><span class="proj-tag">MediaPipe</span><span class="proj-tag">Computer Vision</span>
+          </div>
+          <div class="proj-highlights">
+            <div class="proj-hl">Real-time landmark detection</div>
+            <div class="proj-hl">Video/image processing workflow</div>
+            <div class="proj-hl"><a class="proj-link" href="https://github.com/Akhil-Sheelam/Pose_detection" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-banner java-banner">☕</div>
+        <div class="proj-body">
+          <div class="proj-title">Java Projects Collection</div>
+          <p class="proj-desc">A collection of Java programs and applications built to strengthen core programming, object-oriented concepts, and problem-solving skills.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Java</span><span class="proj-tag">OOP</span><span class="proj-tag">Problem Solving</span>
+          </div>
+          <div class="proj-highlights">
+            <div class="proj-hl">Core Java programming practice</div>
+            <div class="proj-hl">Object-oriented design concepts</div>
+            <div class="proj-hl"><a class="proj-link" href="https://github.com/Akhil-Sheelam/Java_projects" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div>
+          </div>
+        </div>
+      </article>
 
     </div>
   </div>
 
   <div class="proj-controls reveal">
-    <button class="proj-btn" id="projPrev">&#8592;</button>
-    <div class="proj-dots" id="projDots">
-      <div class="proj-dot active"></div>
-      <div class="proj-dot"></div>
-      <div class="proj-dot"></div>
-    </div>
-    <button class="proj-btn" id="projNext">&#8594;</button>
+    <button class="proj-btn" id="projPrev" aria-label="Previous project">&#8592;</button>
+    <div class="proj-dots" id="projDots"></div>
+    <button class="proj-btn" id="projNext" aria-label="Next project">&#8594;</button>
   </div>
 </section>
 
@@ -1163,7 +1213,7 @@ button { font-family: inherit; }
 
   <div class="edu-grid reveal">
     <div class="edu-card">
-      <div class="edu-badge">B.Tech · Pursuing</div>
+      <div class="edu-badge">B.Tech · Completed</div>
       <div class="edu-degree">Computer Science &amp; Engineering</div>
       <div class="edu-school">GH Raisoni College of Engineering and Management, Nagpur</div>
       <div class="edu-foot">
@@ -1218,119 +1268,67 @@ button { font-family: inherit; }
 <section class="section" id="contact">
   <div class="section-head reveal">
     <p class="section-label">Contact Me</p>
-    <h2 class="section-title">Let's Connect</h2>
-    <p class="section-sub">Whether you have an opening, a project, or just want to say hello — my inbox is always open.</p>
+    <h2 class="section-title">Let’s Connect</h2>
+    <p class="section-sub">Open to entry-level Data Analyst opportunities, analytics projects, and conversations about turning data into useful business insights.</p>
   </div>
 
   <div class="contact-grid">
-    <!-- Left: Info -->
     <div class="reveal">
-      <h3 class="contact-headline">Hiring a fresher?<br><span>I'm your person.</span></h3>
-      <p class="contact-sub">I'm actively looking for internship and entry-level opportunities in Python development, automation, and data engineering. I'm a fast learner, hardworking, and ready to contribute from day one.</p>
+      <h3 class="contact-headline">Looking for a Data Analyst?<br><span>Let’s talk.</span></h3>
+      <p class="contact-sub">I’m currently exploring entry-level opportunities where I can use Python, SQL, Excel, Power BI, and data visualization to solve practical business problems.</p>
 
       <div class="contact-list">
         <a href="/cdn-cgi/l/email-protection#6809030001041b000d0d0409055c280f05090104460b0705" class="contact-row">
           <div class="contact-row-icon">✉️</div>
-          <div>
-            <div class="contact-row-label">Email (click to send)</div>
-            <div class="contact-row-value"><span class="__cf_email__" data-cfemail="1b7a7073727768737e7e777a762f5b7c767a727735787476">[email&#160;protected]</span></div>
-          </div>
+          <div><div class="contact-row-label">Email</div><div class="contact-row-value"><span class="__cf_email__" data-cfemail="1b7a7073727768737e7e777a762f5b7c767a727735787476">[email&#160;protected]</span></div></div>
         </a>
         <a href="tel:+917219413258" class="contact-row">
           <div class="contact-row-icon">📞</div>
-          <div>
-            <div class="contact-row-label">Phone</div>
-            <div class="contact-row-value">+91 72194 13258</div>
-          </div>
+          <div><div class="contact-row-label">Phone</div><div class="contact-row-value">+91 72194 13258</div></div>
         </a>
         <a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer" class="contact-row">
-          <div class="contact-row-icon">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="var(--primary)"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          </div>
-          <div>
-            <div class="contact-row-label">GitHub</div>
-            <div class="contact-row-value">github.com/Akhil-Sheelam ↗</div>
-          </div>
+          <div class="contact-row-icon">⌘</div>
+          <div><div class="contact-row-label">GitHub</div><div class="contact-row-value">github.com/Akhil-Sheelam ↗</div></div>
         </a>
         <a href="https://www.linkedin.com/in/akhilsheelam-" target="_blank" rel="noopener noreferrer" class="contact-row">
-          <div class="contact-row-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div>
-            <div class="contact-row-label">LinkedIn</div>
-            <div class="contact-row-value">linkedin.com/in/akhilsheelam- ↗</div>
-          </div>
+          <div class="contact-row-icon">in</div>
+          <div><div class="contact-row-label">LinkedIn</div><div class="contact-row-value">linkedin.com/in/akhilsheelam- ↗</div></div>
         </a>
         <div class="contact-row" style="cursor:default;">
           <div class="contact-row-icon">📍</div>
-          <div>
-            <div class="contact-row-label">Location</div>
-            <div class="contact-row-value">Pune / Nagpur, Maharashtra, India</div>
-          </div>
+          <div><div class="contact-row-label">Location</div><div class="contact-row-value">Pune / Nagpur, Maharashtra, India</div></div>
         </div>
       </div>
     </div>
 
-    <!-- Right: Contact Form (Formspree — delivers to Gmail inbox) -->
     <div class="reveal">
       <div class="contact-form-card">
         <div class="form-card-top"></div>
         <div class="form-card-body">
           <div class="form-title">Send Me a Message</div>
-          <div class="form-sub">Fill in the form and hit Send — the message lands directly in my Gmail inbox. No redirects.</div>
-
+          <div class="form-sub">For job opportunities, analytics projects, or professional networking.</div>
           <form id="contactForm" novalidate>
-            <!-- Formspree endpoint -->
-            <input type="hidden" name="_subject" value="New message from your Portfolio!" />
-            <!-- Honeypot spam protection -->
+            <input type="hidden" name="_subject" value="New message from Data Analyst Portfolio" />
             <input type="text" name="_gotcha" style="display:none;" />
-
             <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="f-name">Your Name *</label>
-                <input class="form-input" type="text" id="f-name" name="name"
-                  placeholder="John Smith" required autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="f-email">Your Email *</label>
-                <input class="form-input" type="email" id="f-email" name="email"
-                  placeholder="you@company.com" required autocomplete="email" />
-              </div>
+              <div class="form-group"><label class="form-label" for="f-name">Your Name *</label><input class="form-input" type="text" id="f-name" name="name" placeholder="John Smith" required autocomplete="name" /></div>
+              <div class="form-group"><label class="form-label" for="f-email">Your Email *</label><input class="form-input" type="email" id="f-email" name="email" placeholder="you@company.com" required autocomplete="email" /></div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="f-phone">Phone (optional)</label>
-              <input class="form-input" type="tel" id="f-phone" name="phone"
-                placeholder="+91 98765 43210" autocomplete="tel" />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="f-subject">Subject *</label>
-              <input class="form-input" type="text" id="f-subject" name="subject_line"
-                placeholder="Job Opportunity / Internship / Project" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="f-message">Message *</label>
-              <textarea class="form-textarea" id="f-message" name="message"
-                placeholder="Tell me about the opportunity or project..." required style="height:120px;"></textarea>
-            </div>
-
-            <!-- Status messages -->
+            <div class="form-group"><label class="form-label" for="f-phone">Phone (optional)</label><input class="form-input" type="tel" id="f-phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" /></div>
+            <div class="form-group"><label class="form-label" for="f-subject">Subject *</label><input class="form-input" type="text" id="f-subject" name="subject_line" placeholder="Data Analyst Opportunity" required /></div>
+            <div class="form-group"><label class="form-label" for="f-message">Message *</label><textarea class="form-textarea" id="f-message" name="message" placeholder="Tell me about the opportunity or project..." required style="height:120px;"></textarea></div>
             <div id="form-status" style="display:none; padding:10px 14px; border-radius:10px; font-size:13px; font-weight:600; margin-bottom:14px;"></div>
-
             <button type="submit" class="form-submit" id="submitBtn">
               <span id="btn-text">✉ &nbsp; Send Message</span>
-              <span id="btn-loader" style="display:none;">
-                <svg style="animation:spin 0.8s linear infinite;width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10" /></svg>
-                Sending...
-              </span>
+              <span id="btn-loader" style="display:none;"><svg style="animation:spin 0.8s linear infinite;width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10" /></svg>Sending...</span>
             </button>
-            <p class="form-note">🔒 Your message is sent securely via Formspree directly to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1978727170756a717c7c7578742d29597e74787075377a7674">[email&#160;protected]</a></p>
+            <p class="form-note">🔒 Your message is sent securely via Formspree.</p>
           </form>
 
-          <!-- Success state -->
           <div class="form-success" id="formSuccess">
             <div class="success-icon">🎉</div>
             <div class="success-title">Message Sent!</div>
-            <div class="success-msg">Thanks for reaching out! I've received your message in my inbox and will reply within 24 hours.</div>
+            <div class="success-msg">Thanks for reaching out! I’ve received your message and will reply as soon as possible.</div>
             <button onclick="resetForm()" style="margin-top:20px; background:none; border:1px solid var(--border); color:var(--muted); padding:10px 20px; border-radius:10px; cursor:pointer; font-family:inherit; font-size:13px; transition:all 0.2s;">Send another message</button>
           </div>
         </div>
@@ -1441,7 +1439,7 @@ button { font-family: inherit; }
     <li><a href="https://github.com/Akhil-Sheelam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
     <li><a href="https://www.linkedin.com/in/akhilsheelam-" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
   </ul>
-  <p class="footer-copy">© 2025 Akhil Yakantham Sheelam</p>
+  <p class="footer-copy">© 2026 Akhil Yakantham Sheelam</p>
 </footer>
 
 <!-- Back to top -->
@@ -1511,25 +1509,104 @@ document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 /* ── Project slider ── */
 const track = document.getElementById('projTrack');
-const dots = document.querySelectorAll('.proj-dot');
+const prevBtn = document.getElementById('projPrev');
+const nextBtn = document.getElementById('projNext');
+const dotsWrap = document.getElementById('projDots');
 let cur = 0;
+let autoSlide = null;
+
+const projectCards = Array.from(track.querySelectorAll('.proj-card'));
+projectCards.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'proj-dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => slideTo(i));
+  dotsWrap.appendChild(dot);
+});
+
+const dots = Array.from(dotsWrap.querySelectorAll('.proj-dot'));
 
 function slideTo(idx) {
-  const cards = track.querySelectorAll('.proj-card');
-  const gap = 22;
-  const cardW = cards[0]?.offsetWidth ?? 340;
-  track.scrollTo({ left: idx * (cardW + gap), behavior: 'smooth' });
+  const card = projectCards[idx];
+  if (!card) return;
+  track.scrollTo({ left: card.offsetLeft - 10, behavior: 'smooth' });
   dots.forEach((d, i) => d.classList.toggle('active', i === idx));
   cur = idx;
 }
 
-document.getElementById('projNext').addEventListener('click', () => slideTo((cur + 1) % dots.length));
-document.getElementById('projPrev').addEventListener('click', () => slideTo((cur - 1 + dots.length) % dots.length));
-dots.forEach((d, i) => d.addEventListener('click', () => slideTo(i)));
+prevBtn.addEventListener('click', () => slideTo((cur - 1 + projectCards.length) % projectCards.length));
+nextBtn.addEventListener('click', () => slideTo((cur + 1) % projectCards.length));
 
-// Auto-slide every 4s
-let autoSlide = setInterval(() => slideTo((cur + 1) % dots.length), 4000);
+function startAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => slideTo((cur + 1) % projectCards.length), 5200);
+}
+startAutoSlide();
+
+track.addEventListener('pointerdown', () => clearInterval(autoSlide));
+track.addEventListener('pointerup', startAutoSlide);
 track.addEventListener('touchstart', () => clearInterval(autoSlide), { passive: true });
+track.addEventListener('touchend', startAutoSlide, { passive: true });
+
+/* ── Hero typing animation ── */
+const typingEl = document.getElementById('typingRole');
+const roleWords = [
+  'Data Analyst',
+  'Python & SQL Enthusiast',
+  'Power BI Dashboard Builder',
+  'Business Insights Explorer'
+];
+let roleIndex = 0, charIndex = 0, deleting = false;
+
+function typeRole() {
+  if (!typingEl) return;
+  const word = roleWords[roleIndex];
+  typingEl.textContent = deleting ? word.slice(0, --charIndex) : word.slice(0, ++charIndex);
+
+  if (!deleting && charIndex === word.length) {
+    deleting = true;
+    setTimeout(typeRole, 1500);
+    return;
+  }
+  if (deleting && charIndex === 0) {
+    deleting = false;
+    roleIndex = (roleIndex + 1) % roleWords.length;
+  }
+  setTimeout(typeRole, deleting ? 45 : 75);
+}
+setTimeout(typeRole, 700);
+
+/* ── Animated hero counters ── */
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    if (el.dataset.done === '1') return;
+    el.dataset.done = '1';
+
+    const target = parseFloat(el.dataset.target || '0');
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1300;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      let value = target * eased;
+      if (el.dataset.format === 'k') {
+        const shown = value >= 1000 ? (value / 1000).toFixed(value >= 5000 ? 0 : 1) + 'K' : Math.round(value).toString();
+        el.textContent = shown + suffix;
+      } else {
+        el.textContent = value.toFixed(decimals) + suffix;
+      }
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll('.count-up').forEach(el => counterObs.observe(el));
 
 /* ── Contact form → Formspree (delivers directly to akhilsheelam40@gmail.com) ── */
 const contactForm  = document.getElementById('contactForm');
